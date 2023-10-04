@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <application
         android:allowBackup="true"
@@ -16,11 +16,21 @@
         android:theme="@style/Theme.AndroidEp1"
         tools:targetApi="33">
         <activity
-            android:name=".Activity2"
+            android:name=".CalculatorActivity"
             android:exported="false" />
-        <activity
-            android:name=".Activity1"
+
+        <service
+            android:name=".CalculatorService"
+            android:enabled="true"
             android:exported="false" />
+        <service
+            android:name=".MusicService"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name=".ForegroundMusicService"
+            android:enabled="true" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">

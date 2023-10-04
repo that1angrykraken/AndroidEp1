@@ -9,15 +9,22 @@
     tools:context=".MainActivity">
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/buttonNavigate1"
+        android:id="@+id/buttonStartService"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="go to Activity 1"/>
+        android:text="Start background service"/>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/buttonNavigate2"
+        android:id="@+id/buttonStartForegroundService"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="go to Activity 2"/>
+        android:text="Start foreground service"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonNavigateToBoundServiceExample"
+        style="@style/Widget.Material3.Button.ElevatedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bound service example"/>
 
 </LinearLayout>
