@@ -1,15 +1,12 @@
-package seamonster.kraken.androidep1
+package seamonster.kraken.serviceexample
 
-import android.Manifest
 import android.app.Notification
 import android.app.NotificationManager
 import android.app.PendingIntent
 import android.app.Service
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.media.MediaPlayer
 import android.os.IBinder
-import androidx.core.app.ActivityCompat
 import androidx.core.app.NotificationChannelCompat
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
@@ -48,11 +45,14 @@ class ForegroundMusicService : Service() {
         ).setName("Foreground service").build()
         NotificationManagerCompat.from(this).createNotificationChannel(channel)
 
-        val stopIntent = Intent(this, ForegroundMusicService::class.java).apply {
-            action = "STOP"
-        }
-        val pendingIntent =
-            PendingIntent.getService(this, 0, stopIntent, PendingIntent.FLAG_IMMUTABLE)
+        val stopIntent = Intent(this, ForegroundMusicService::class.java)
+        stopIntent.action = "STOP"
+        val pendingIntent = PendingIntent.getService(
+            this,
+            0,
+            stopIntent,
+            PendingIntent.FLAG_IMMUTABLE
+        )
 
         return NotificationCompat.Builder(this, "FOREGROUND_NOTIFICATIONS")
             .setContentTitle("ForegroundService")

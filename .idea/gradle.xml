@@ -12,6 +12,10 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/app/androidintentexample" />
+            <option value="$PROJECT_DIR$/app/broadcastreceiverexample" />
+            <option value="$PROJECT_DIR$/app/fragmentexample" />
+            <option value="$PROJECT_DIR$/app/serviceexample" />
           </set>
         </option>
       </GradleProjectSettings>
